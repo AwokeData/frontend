@@ -7,13 +7,13 @@ import Stepper from './stepper';
 import QuickInfo from './quick-info';
 
 const Welcome = () => (
-        <div id="welcome">
-                <Intro />
-                <Mission />
-                <Stepper />
-                <QuickInfo />
-                <CallToAction/>
-        </div>
+  <div id="welcome">
+    <Intro />
+    <Mission />
+    <Stepper />
+    <QuickInfo />
+    <CallToAction/>
+  </div>
 );
 
 export default Welcome;

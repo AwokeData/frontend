@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import { Button } from "semantic-ui-react";
 import tempimg from '../../images/temp.png';
+import { Link } from "react-router-dom";
+import { ROUTE_ROOT } from "../../utils/constants";
 
 const IntroMissionSection = styled.section`
     display: flex;
@@ -82,7 +84,7 @@ const QuickInfo = () => (
                 <p>
                     Each dashboard lets you analyze your borrower’s financial activity, repayment activity, and probability of delinquency or default. Understand the velocity of their expenses, or the volatility of a borrower’s income to boost your underwriting. 
                 </p>
-                <Button className="primary-button fullscreen-btn">Get Started</Button>
+                <Button className="primary-button fullscreen-btn" as={Link} to={`${ROUTE_ROOT}/dashboard`}>See an Example</Button>
             </div>
         </div>
     </IntroMissionSection>
