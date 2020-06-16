@@ -6,17 +6,15 @@ import { ROUTE_ROOT } from '../../utils/constants';
 const ROOT = ROUTE_ROOT + '/dashboard/user/id';
 
 const DashboardPanelWrapper = styled.div`
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
   margin: 10px 0 0 10px;
   padding-right: 25px;
   text-align: left;
   color: white;
   flex-basis: 18%;
-  overflow-y: scroll;
   overflow-x: hidden;
-
-  > p {
-    text-transform: uppercase;
-  }
 `;
 
 const PanelBoxes = styled.div`
@@ -42,6 +40,8 @@ const PanelBoxes = styled.div`
   .user-title {
     font-size: 24px;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .menu-title {
@@ -67,9 +67,9 @@ function DashboardPanel() {
           padding: '25px 30px',
         }}
       >
-        <p className="user-title"> ID #1869245781</p>
-        <p className="user-title"> John Doe</p>
-        <p className="user-title"> New York, NY</p>
+        <p className="user-title"> ID&nbsp;#1869245781</p>
+        <p className="user-title"> John&nbsp;Doe</p>
+        <p className="user-title"> New&nbsp;York,&nbsp;NY</p>
       </PanelBoxes>
       <PanelBoxes
         data-attr="overview"

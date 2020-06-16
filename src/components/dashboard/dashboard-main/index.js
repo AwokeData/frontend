@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import OverView from './OverView';
+import OverView from './overview/OverView';
 import Expense from './Expense';
 import Income from './Income';
 import Credit from './Credit';
 import Simulation from './Simulation';
-import StessTesting from './StressTesting';
 import StressTesting from './StressTesting';
 
 const ROOT = window.location.pathname;
 
 const DashboardMainWrapper = styled.div`
+  @media screen and (max-width: 1100px) {
+    flex-basis: 101%;
+  }
   flex-basis: 82%;
   position: relative;
   margin-top: 10px;
