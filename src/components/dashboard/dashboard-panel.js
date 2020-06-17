@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-import { ROUTE_ROOT } from '../../utils/constants';
 
-const ROOT = ROUTE_ROOT + '/dashboard/user/id';
+const ROOT = '/dashboard/user/id';
 
 const DashboardPanelWrapper = styled.div`
   @media screen and (max-width: 1100px) {

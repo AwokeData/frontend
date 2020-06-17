@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import OverView from './overview/OverView';
-import Expense from './Expense';
+import Expense from './expense/Expense';
 import Income from './Income';
 import Credit from './Credit';
 import Simulation from './Simulation';

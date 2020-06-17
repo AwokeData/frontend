@@ -2,9 +2,8 @@ import React from 'react';
 import { Menu, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import { ROUTE_ROOT } from '../../utils/constants';
 
-const ROOT = ROUTE_ROOT + '/dashboard';
+const ROOT = '/dashboard';
 
 const DashboardNavWrapper = styled.nav`
   a.item {
@@ -33,10 +32,7 @@ class DashboardNav extends React.Component {
         (props &&
           props.location &&
           props.location.pathname &&
-          this.props.location.pathname.replace(
-            '/altdatana-react/dashboard/',
-            '',
-          )) ||
+          this.props.location.pathname.replace('/dashboard/', '')) ||
         'shop',
     };
   }
@@ -52,7 +48,7 @@ class DashboardNav extends React.Component {
         <Menu secondary id="primary-menu">
           <Menu.Item
             as={Link}
-            to={`${ROUTE_ROOT}/`}
+            to="/"
             name="Home"
             onClick={this.handleItemClick}
           >
@@ -82,7 +78,7 @@ class DashboardNav extends React.Component {
               active={activeItem === 'login'}
               onClick={this.handleItemClick}
               className="login"
-              to={`${ROUTE_ROOT}/login`}
+              to="/login"
             >
               <Image src="/images/wireframe/square-image.png" avatar />
             </Menu.Item>
