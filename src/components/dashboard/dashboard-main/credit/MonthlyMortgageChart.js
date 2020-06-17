@@ -72,7 +72,7 @@ class CustomizedDot extends PureComponent {
   }
 }
 
-export default class GrossChart extends PureComponent {
+export default class MonthlyMortgageChart extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
   render() {

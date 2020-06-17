@@ -3,7 +3,6 @@ import {
   ResponsiveContainer,
   ComposedChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -51,7 +50,7 @@ const data = [
 
 class CustomizedDot extends PureComponent {
   render() {
-    const { cx, cy, stroke, payload, value } = this.props;
+    const { cx, cy } = this.props;
 
     return (
       <svg

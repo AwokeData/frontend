@@ -5,6 +5,7 @@ import GrossChart from './GrossChart';
 import AmountChart from './AmountChart';
 import ExpenseChart from './ExpenseChart';
 import AlternateChart from './AlternateChart';
+import CategoryChart from './CategoryChart';
 
 const Header = styled.div`
   .title {
@@ -26,7 +27,7 @@ const Gross = styled.div`
     width: 100%;
     background-color: rgb(245, 245, 245);
     border-radius: 25px;
-    padding: 20px 30px 20px 30px;
+    padding: 15px 25px 15px 25px;
     margin-bottom: 40px;
   }
 
@@ -39,6 +40,8 @@ const Gross = styled.div`
   .price-explain {
     font-family: Poppins-Regular;
     font-size: 14px;
+    font-weight: normal;
+    margin: 0;
   }
 
   .ui.card {
@@ -126,12 +129,30 @@ const Category = styled.div`
     .content {
       background-color: #f5f5f5;
       border-radius: 0px 0px 25px 25px !important;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .chart-header {
       padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
+    }
+  }
+
+  .ui.basic.table {
+    thead th {
+      font-weight: 400 !important;
+      font-family: Poppins;
+      font-size: 15px;
+    }
+
+    tbody td:nth-child(1),
+    td:nth-child(2),
+    td:nth-child(3),
+    td:nth-child(4) {
+      font-size: 17px;
+      font-weight: Bold;
     }
   }
 `;
@@ -230,24 +251,70 @@ export default function Expense() {
                   <Card.Header>Category Analysis</Card.Header>
                 </Card.Content>
                 <Card.Content>
-                  <Table fixed>
+                  <Table basic="very">
                     <Table.Header>
-                      <Table.Row>
-                        <Table.HeaderCell>Category Name</Table.HeaderCell>
-                        <Table.HeaderCell>Period Average</Table.HeaderCell>
-                        <Table.HeaderCell>Monthly Average</Table.HeaderCell>
-                        <Table.HeaderCell>Weekly Average</Table.HeaderCell>
+                      <Table.Row textAlign="center">
+                        <Table.HeaderCell style={{ width: '15%' }}>
+                          Category Name
+                        </Table.HeaderCell>
+                        <Table.HeaderCell style={{ width: '15%' }}>
+                          Period Average
+                        </Table.HeaderCell>
+                        <Table.HeaderCell style={{ width: '15%' }}>
+                          Monthly Average
+                        </Table.HeaderCell>
+                        <Table.HeaderCell style={{ width: '15%' }}>
+                          Weekly Average
+                        </Table.HeaderCell>
                         <Table.HeaderCell>Graph Over Time</Table.HeaderCell>
                       </Table.Row>
                     </Table.Header>
 
                     <Table.Body>
-                      <Table.Row>
+                      <Table.Row textAlign="center">
                         <Table.Cell>Entertainment</Table.Cell>
                         <Table.Cell>$170.39</Table.Cell>
                         <Table.Cell>$170.39</Table.Cell>
                         <Table.Cell>$170.39</Table.Cell>
-                        <Table.Cell></Table.Cell>
+                        <Table.Cell style={{ paddingBottom: 0 }}>
+                          <CategoryChart />
+                        </Table.Cell>
+                      </Table.Row>
+                      <Table.Row textAlign="center">
+                        <Table.Cell>Gym</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell style={{ paddingBottom: 0 }}>
+                          <CategoryChart />
+                        </Table.Cell>
+                      </Table.Row>
+                      <Table.Row textAlign="center">
+                        <Table.Cell>Credit Card</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell style={{ paddingBottom: 0 }}>
+                          <CategoryChart />
+                        </Table.Cell>
+                      </Table.Row>
+                      <Table.Row textAlign="center">
+                        <Table.Cell>Restaurants</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell style={{ paddingBottom: 0 }}>
+                          <CategoryChart />
+                        </Table.Cell>
+                      </Table.Row>
+                      <Table.Row textAlign="center">
+                        <Table.Cell>Services</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell style={{ paddingBottom: 0 }}>
+                          <CategoryChart />
+                        </Table.Cell>
                       </Table.Row>
                     </Table.Body>
                   </Table>

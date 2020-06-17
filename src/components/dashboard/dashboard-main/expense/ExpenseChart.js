@@ -51,7 +51,6 @@ export default class ExpenseChart extends PureComponent {
 }
 
 const renderLegend = (props) => {
-  console.log(props.payload);
   const { payload } = props;
 
   return (

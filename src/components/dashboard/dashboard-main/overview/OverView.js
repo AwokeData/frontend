@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Grid, Label, Card } from 'semantic-ui-react';
 import ActivateChart from './ActivateChart';
 import WeeklyChart from './WeeklyChart';
+import AreaFillChart from './AreaFillChart';
 
 const Header = styled.div`
   .title {
@@ -23,7 +24,7 @@ const Estimate = styled.div`
     width: 100%;
     background-color: rgb(245, 245, 245);
     border-radius: 25px;
-    padding: 20px 30px 20px 30px;
+    padding: 15px 25px 15px 25px;
   }
 
   .price {
@@ -35,6 +36,8 @@ const Estimate = styled.div`
   .price-explain {
     font-family: Poppins-Regular;
     font-size: 14px;
+    font-weight: normal;
+    margin: 0;
   }
 `;
 
@@ -63,6 +66,8 @@ const Active = styled.div`
   .price-explain {
     font-family: Poppins-Regular;
     font-size: 14px;
+    font-weight: normal;
+    margin: 0;
   }
 
   .ui.card {
@@ -108,8 +113,29 @@ const Weekly = styled.div`
   .price-explain {
     font-family: Poppins-Regular;
     font-size: 14px;
+    font-weight: normal;
+    margin: 0;
   }
 
+  .ui.card {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: none;
+
+    .content {
+      background-color: #f5f5f5;
+      border-radius: 0px 0px 25px 25px !important;
+    }
+
+    .chart-header {
+      padding-left: 30px;
+      background-color: #eceef4;
+      border-radius: 25px 25px 0px 0px !important;
+    }
+  }
+`;
+
+const Area = styled.div`
   .ui.card {
     width: 100%;
     border-radius: 25px;
@@ -229,6 +255,22 @@ export default function OverView() {
           </Grid.Row>
         </Grid>
       </Weekly>
+      <Area>
+        <Grid columns={1}>
+          <Grid.Row>
+            <Grid.Column width={12} style={{ margin: '0 auto' }}>
+              <Card>
+                <Card.Content className="chart-header">
+                  <Card.Header>Area Chart</Card.Header>
+                </Card.Content>
+                <Card.Content>
+                  <AreaFillChart />
+                </Card.Content>
+              </Card>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Area>
     </>
   );
 }

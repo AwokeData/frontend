@@ -51,7 +51,7 @@ const PanelBoxes = styled.div`
 
 function DashboardPanel() {
   const history = useHistory();
-  const [active, setActive] = useState('expense');
+  const [active, setActive] = useState('overview');
 
   useEffect(() => {
     history.push(`${ROOT}/${active}`);
