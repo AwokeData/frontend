@@ -76,6 +76,7 @@ const Active = styled.div`
     }
 
     .chart-header {
+      padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
     }
@@ -120,6 +121,7 @@ const Weekly = styled.div`
     }
 
     .chart-header {
+      padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
     }

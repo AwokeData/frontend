@@ -152,7 +152,12 @@ export default class ActivateChart extends PureComponent {
             ticks={[-200, 0, 200, 400, 600, 800, 1000, 1200, 1400]}
           />
           <YAxis yAxisId="right" orientation="right" />
-          <CartesianGrid vertical={false} stroke="#000000" strokeWidth={1} />
+          <CartesianGrid
+            vertical={false}
+            fill="white"
+            stroke="#000000"
+            strokeWidth={1}
+          />
           <Tooltip />
           <Line
             type="number"

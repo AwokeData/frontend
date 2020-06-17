@@ -85,7 +85,12 @@ export default class AmountChart extends PureComponent {
             bottom: 5,
           }}
         >
-          <CartesianGrid vertical={false} stroke="#000000" strokeWidth={1} />
+          <CartesianGrid
+            vertical={false}
+            fill="white"
+            stroke="#000000"
+            strokeWidth={1}
+          />
           <XAxis dataKey="name" />
           <YAxis
             interval={0}

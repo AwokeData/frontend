@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Welcome from './components/welcome';
 import NavBar from './components/navbar';
@@ -31,6 +31,8 @@ class App extends Component {
       <Fragment>
         <ScrollIntoView>
           <Switch>
+            <Redirect exact from="/altdatana-react" to="/" />
+            <NavRoute exact path="/" component={Welcome} />
             <NavRoute exact path="/" component={Welcome} />
             <NavRoute exact path="/about" component={About} />
             <NavRoute exact path="/how-it-works" component={HowItWorks} />

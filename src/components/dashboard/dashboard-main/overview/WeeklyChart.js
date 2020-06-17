@@ -147,7 +147,7 @@ export default class WeeklyChart extends PureComponent {
             dx={-10}
           />
           <YAxis yAxisId="right" orientation="right" />
-          <CartesianGrid stroke="#000000" strokeWidth={0.5} />
+          <CartesianGrid stroke="#000000" fill="white" strokeWidth={0.5} />
           <Tooltip />
           <Line
             type="number"

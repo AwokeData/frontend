@@ -113,7 +113,12 @@ export default class GrossChart extends PureComponent {
             ticks={[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]}
             label={{ value: 'Count', angle: -90 }}
           />
-          <CartesianGrid vertical={false} stroke="#000000" strokeWidth={1} />
+          <CartesianGrid
+            vertical={false}
+            fill="white"
+            stroke="#000000"
+            strokeWidth={1}
+          />
           <Tooltip />
           <Line
             type="number"

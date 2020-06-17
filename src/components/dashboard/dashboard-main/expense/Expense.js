@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid, Label, Card } from 'semantic-ui-react';
+import { Grid, Label, Card, Table } from 'semantic-ui-react';
 import GrossChart from './GrossChart';
 import AmountChart from './AmountChart';
 import ExpenseChart from './ExpenseChart';
@@ -52,6 +52,7 @@ const Gross = styled.div`
     }
 
     .chart-header {
+      padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
     }
@@ -86,6 +87,7 @@ const AmountExpense = styled.div`
     }
 
     .chart-header {
+      padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
     }
@@ -93,7 +95,7 @@ const AmountExpense = styled.div`
 `;
 
 const Alternate = styled.div`
-  margin: 0 auto;
+  margin-top: 30px;
 
   .ui.card {
     width: 100%;
@@ -106,6 +108,28 @@ const Alternate = styled.div`
     }
 
     .chart-header {
+      padding-left: 30px;
+      background-color: #eceef4;
+      border-radius: 25px 25px 0px 0px !important;
+    }
+  }
+`;
+
+const Category = styled.div`
+  margin-top: 30px;
+
+  .ui.card {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: none;
+
+    .content {
+      background-color: #f5f5f5;
+      border-radius: 0px 0px 25px 25px !important;
+    }
+
+    .chart-header {
+      padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
     }
@@ -182,7 +206,7 @@ export default function Expense() {
       <Alternate>
         <Grid columns={1}>
           <Grid.Row>
-            <Grid.Column width={12}>
+            <Grid.Column width={12} style={{ margin: '0 auto' }}>
               <Card>
                 <Card.Content className="chart-header">
                   <Card.Header>
@@ -197,6 +221,42 @@ export default function Expense() {
           </Grid.Row>
         </Grid>
       </Alternate>
+      <Category>
+        <Grid columns={1}>
+          <Grid.Row>
+            <Grid.Column width={16} style={{ margin: '0 auto' }}>
+              <Card>
+                <Card.Content className="chart-header">
+                  <Card.Header>Category Analysis</Card.Header>
+                </Card.Content>
+                <Card.Content>
+                  <Table fixed>
+                    <Table.Header>
+                      <Table.Row>
+                        <Table.HeaderCell>Category Name</Table.HeaderCell>
+                        <Table.HeaderCell>Period Average</Table.HeaderCell>
+                        <Table.HeaderCell>Monthly Average</Table.HeaderCell>
+                        <Table.HeaderCell>Weekly Average</Table.HeaderCell>
+                        <Table.HeaderCell>Graph Over Time</Table.HeaderCell>
+                      </Table.Row>
+                    </Table.Header>
+
+                    <Table.Body>
+                      <Table.Row>
+                        <Table.Cell>Entertainment</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell>$170.39</Table.Cell>
+                        <Table.Cell></Table.Cell>
+                      </Table.Row>
+                    </Table.Body>
+                  </Table>
+                </Card.Content>
+              </Card>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Category>
     </>
   );
 }
