@@ -157,6 +157,7 @@ export default class LoanChart extends PureComponent {
     return (
       <ResponsiveContainer width="100%" height={280}>
         <LineChart data={data}>
+          <CartesianGrid fill="white" strokeDasharray="3 3" />
           <XAxis
             dataKey="name"
             tickLine={false}
@@ -173,19 +174,12 @@ export default class LoanChart extends PureComponent {
             dx={-10}
           />
           <YAxis yAxisId="right" width={20} orientation="right" />
-          <CartesianGrid
-            vertical={false}
-            fill="white"
-            stroke="#000000"
-            strokeWidth={0.5}
-          />
           <Tooltip />
           <Line
             type="number"
             dataKey="uv"
-            stroke="#4E81BD"
-            strokeWidth={2}
-            dot={false}
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
           />
         </LineChart>
       </ResponsiveContainer>

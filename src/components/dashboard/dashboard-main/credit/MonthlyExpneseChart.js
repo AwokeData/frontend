@@ -7,6 +7,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
 } from 'recharts';
 
 const data = [
@@ -48,29 +49,29 @@ const data = [
   },
 ];
 
-class CustomizedDot extends PureComponent {
-  render() {
-    const { cx, cy } = this.props;
+// class CustomizedDot extends PureComponent {
+//   render() {
+//     const { cx, cy } = this.props;
 
-    return (
-      <svg
-        x={cx - 5}
-        y={cy - 5}
-        width={70}
-        height={70}
-        fill="#C0504D"
-        viewBox="0 0 1024 1024"
-      >
-        <path
-          d="M 10,150 L 70,10 L 130,150 z"
-          fill="#C0504D"
-          stroke="#C0504D"
-          strokeWidth="10"
-        />
-      </svg>
-    );
-  }
-}
+//     return (
+//       <svg
+//         x={cx - 5}
+//         y={cy - 5}
+//         width={70}
+//         height={70}
+//         fill="#C0504D"
+//         viewBox="0 0 1024 1024"
+//       >
+//         <path
+//           d="M 10,150 L 70,10 L 130,150 z"
+//           fill="#C0504D"
+//           stroke="#C0504D"
+//           strokeWidth="10"
+//         />
+//       </svg>
+//     );
+//   }
+// }
 
 export default class MonthlyExpenseChart extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
@@ -87,6 +88,7 @@ export default class MonthlyExpenseChart extends PureComponent {
             bottom: 10,
           }}
         >
+          <CartesianGrid fill="white" strokeDasharray="3 3" />
           <XAxis
             dataKey="name"
             tickLine={false}
@@ -113,35 +115,25 @@ export default class MonthlyExpenseChart extends PureComponent {
             ticks={[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]}
             label={{ value: 'Count', angle: -90 }}
           />
-          <CartesianGrid
-            vertical={false}
-            fill="white"
-            stroke="#000000"
-            strokeWidth={1}
-          />
           <Tooltip />
+          <Legend />
           <Line
-            type="number"
-            dataKey="uv"
-            stroke="#4E81BD"
-            strokeWidth={2}
-            dot={false}
-          />
-          <Line
-            type="number"
+            type="monotone"
             dataKey="pv"
-            stroke="#FFC000"
-            strokeWidth={2}
-            strokeDasharray="4 4"
-            dot={false}
+            stroke="#8884d8"
+            strokeDasharray="5 5"
           />
           <Line
-            type="number"
+            type="monotone"
+            dataKey="uv"
+            stroke="#82ca9d"
+            strokeDasharray="3 4 5 2"
+          />
+          <Line
+            type="monotone"
             dataKey="wv"
-            stroke="#C0504D"
-            strokeWidth={0}
-            dot={<CustomizedDot />}
-            activeDot={false}
+            stroke="#FFC000"
+            strokeDasharray="5 5"
           />
         </LineChart>
       </ResponsiveContainer>

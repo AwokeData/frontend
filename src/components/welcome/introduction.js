@@ -47,13 +47,17 @@ const IntroductionWrapper = styled.section`
   .left {
     text-align: left;
     color: $primary-blue;
+
+    p {
+      font-size: 20px;
+    }
   }
 
   .right {
     img {
       width: 100%;
     }
-    flex-basis: 40%;
+    flex-basis: 50%;
   }
 
   @media screen and (max-width: 900px) {

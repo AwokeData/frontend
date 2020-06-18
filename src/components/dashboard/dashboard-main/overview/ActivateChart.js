@@ -7,122 +7,123 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
 } from 'recharts';
 
 const data = [
   {
     name: '12/15/19',
-    uv: 1050,
-    pv: 860,
+    price1: 1050,
+    price2: 860,
   },
   {
     name: '12/16/19',
-    uv: 820,
-    pv: 831,
+    price1: 820,
+    price2: 831,
   },
   {
     name: '12/17/19',
-    uv: 500,
-    pv: 802,
+    price1: 500,
+    price2: 802,
   },
   {
     name: '12/18/19',
-    uv: 790,
-    pv: 773,
+    price1: 790,
+    price2: 773,
   },
   {
     name: '12/19/19',
-    uv: 920,
-    pv: 744,
+    price1: 920,
+    price2: 744,
   },
   {
     name: '12/20/19',
-    uv: 1220,
-    pv: 715,
+    price1: 1220,
+    price2: 715,
   },
   {
     name: '12/21/19',
-    uv: 1000,
-    pv: 686,
+    price1: 1000,
+    price2: 686,
   },
   {
     name: '12/22/19',
-    uv: 420,
-    pv: 657,
+    price1: 420,
+    price2: 657,
   },
   {
     name: '12/23/19',
-    uv: 480,
-    pv: 628,
+    price1: 480,
+    price2: 628,
   },
   {
     name: '12/24/19',
-    uv: 520,
-    pv: 599,
+    price1: 520,
+    price2: 599,
   },
   {
     name: '12/25/19',
-    uv: 700,
-    pv: 570,
+    price1: 700,
+    price2: 570,
   },
   {
     name: '12/26/19',
-    uv: 400,
-    pv: 541,
+    price1: 400,
+    price2: 541,
   },
   {
     name: '12/27/19',
-    uv: -20,
-    pv: 512,
+    price1: -20,
+    price2: 512,
   },
   {
     name: '12/28/19',
-    uv: 480,
-    pv: 483,
+    price1: 480,
+    price2: 483,
   },
   {
     name: '12/29/19',
-    uv: 660,
-    pv: 454,
+    price1: 660,
+    price2: 454,
   },
   {
     name: '12/30/19',
-    uv: 290,
-    pv: 425,
+    price1: 290,
+    price2: 425,
   },
   {
     name: '12/31/19',
-    uv: 580,
-    pv: 396,
+    price1: 580,
+    price2: 396,
   },
   {
     name: '1/1/20',
-    uv: 760,
-    pv: 367,
+    price1: 760,
+    price2: 367,
   },
 ];
 
-class CustomizedAxisTick extends PureComponent {
-  render() {
-    const { x, y, payload } = this.props;
+// class CustomizedAxisTick extends PureComponent {
+//   render() {
+//     const { x, y, payload } = this.props;
 
-    return (
-      <g transform={`translate(${x},${y})`}>
-        <text
-          x={-10}
-          y={0}
-          dy={-5}
-          fontSize={11}
-          textAnchor="start"
-          fill="#666"
-          transform="rotate(-45)"
-        >
-          {payload.value}
-        </text>
-      </g>
-    );
-  }
-}
+//     return (
+//       <g transform={`translate(${x},${y})`}>
+//         <text
+//           x={-10}
+//           y={0}
+//           dy={-5}
+//           fontSize={11}
+//           textAnchor="start"
+//           fill="#666"
+//           transform="rotate(-45)"
+//         >
+//           {payload.value}
+//         </text>
+//       </g>
+//     );
+//   }
+// }
 
 export default class ActivateChart extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
@@ -132,48 +133,29 @@ export default class ActivateChart extends PureComponent {
       <ResponsiveContainer width="100%" height={272}>
         <LineChart
           data={data}
-          padding={{
-            top: 0,
-            right: 10,
-            left: 10,
-            bottom: 0,
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
           }}
         >
-          <XAxis
-            dataKey="name"
-            tickLine={false}
-            interval={0}
-            padding={{ left: 10, right: 10 }}
-            tick={<CustomizedAxisTick />}
-          />
+          <CartesianGrid strokeDasharray="3 3" fill="white" />
+          <XAxis dataKey="name" interval={0} fontSize={10} />
           <YAxis
-            tickLine={false}
             domain={['dataMin', 'dataMax']}
+            interval={0}
             ticks={[-200, 0, 200, 400, 600, 800, 1000, 1200, 1400]}
           />
-          <YAxis yAxisId="right" orientation="right" />
-          <CartesianGrid
-            vertical={false}
-            fill="white"
-            stroke="#000000"
-            strokeWidth={1}
-          />
           <Tooltip />
+          <Legend />
           <Line
-            type="number"
-            dataKey="uv"
-            stroke="#4E81BD"
-            strokeWidth={2}
-            dot={false}
+            type="monotone"
+            dataKey="price1"
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
           />
-          <Line
-            type="number"
-            dataKey="pv"
-            stroke="#C0504D"
-            strokeWidth={2}
-            strokeDasharray="4 4"
-            dot={false}
-          />
+          <Line type="monotone" dataKey="price2" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
     );

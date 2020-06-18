@@ -26,13 +26,15 @@ const Deposite = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -71,13 +73,15 @@ const IncomeDeposite = styled.div`
       .expense-price {
         margin-top: 20px;
         margin-bottom: 15px;
-        font-family: Poppins-SemiBold;
+        font-family: sans-serif;
+        font-weight: normal;
         font-size: 28px;
         text-align: center;
       }
 
       .description {
-        font-family: Poppins-Regular;
+        font-family: sans-serif;
+        font-weight: normal;
         font-size: 14px;
         text-align: center;
       }
@@ -102,13 +106,15 @@ const Estimate = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 14px;
     font-weight: normal;
     margin: 0;

@@ -4,7 +4,7 @@ import { Grid, Label, Card } from 'semantic-ui-react';
 import MonthlyExpneseChart from './MonthlyExpneseChart';
 import WeeklyExpneseChart from './WeeklyExpneseChart';
 import MonthlyMortgageChart from './MonthlyMortgageChart';
-import WeeklyMortgageChart from './WeeklyMortgageChart.js';
+import MonthlyCreditCardChart from './MonthlyCreditCardChart.js';
 
 const Header = styled.div`
   .title {
@@ -18,13 +18,15 @@ const CreditDom = styled.div`
   margin-top: 50px;
 
   .estimate-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
 
   .active-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -38,13 +40,15 @@ const CreditDom = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -191,7 +195,7 @@ export default function Credit() {
                   <Card.Header>Monthly Income-to-Credit Card Ratio</Card.Header>
                 </Card.Content>
                 <Card.Content>
-                  <WeeklyMortgageChart />
+                  <MonthlyCreditCardChart />
                 </Card.Content>
               </Card>
             </Grid.Column>

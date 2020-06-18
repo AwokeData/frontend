@@ -33,7 +33,6 @@ class App extends Component {
           <Switch>
             <Redirect exact from="/altdatana-react" to="/" />
             <NavRoute exact path="/" component={Welcome} />
-            <NavRoute exact path="/" component={Welcome} />
             <NavRoute exact path="/about" component={About} />
             <NavRoute exact path="/how-it-works" component={HowItWorks} />
             <NavRoute exact path="/products" component={Products} />

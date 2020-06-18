@@ -80,13 +80,15 @@ const Stochastic = styled.div`
   margin-top: 50px;
 
   .estimate-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
 
   .active-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -100,15 +102,16 @@ const Stochastic = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
-    font-size: 14px;
+    font-family: sans-serif;
     font-weight: normal;
+    font-size: 14px;
     margin: 0;
   }
 

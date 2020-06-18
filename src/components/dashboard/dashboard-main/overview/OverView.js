@@ -15,7 +15,8 @@ const Header = styled.div`
 
 const Estimate = styled.div`
   .estimate-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -28,15 +29,16 @@ const Estimate = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
-    font-size: 14px;
+    font-family: sans-serif;
     font-weight: normal;
+    font-size: 14px;
     margin: 0;
   }
 `;
@@ -44,7 +46,8 @@ const Estimate = styled.div`
 const Active = styled.div`
   margin-top: 50px;
   .active-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -58,15 +61,16 @@ const Active = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
-    font-size: 14px;
+    font-family: sans-serif;
     font-weight: normal;
+    font-size: 14px;
     margin: 0;
   }
 
@@ -91,7 +95,8 @@ const Active = styled.div`
 const Weekly = styled.div`
   margin-top: 10px;
   .active-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -105,13 +110,15 @@ const Weekly = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 14px;
     font-weight: normal;
     margin: 0;

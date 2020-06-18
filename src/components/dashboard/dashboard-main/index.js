@@ -23,6 +23,8 @@ const DashboardMainWrapper = styled.div`
   background-color: white;
   border-radius: 50px 0 0 0;
   text-align: left;
+  height: 100vh;
+  overflow-y: scroll;
 `;
 
 const DashboardContainer = styled.div`

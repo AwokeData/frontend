@@ -7,6 +7,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
 } from 'recharts';
 
 const data = [
@@ -91,6 +92,9 @@ export default class DepositeChart extends PureComponent {
             bottom: 0,
           }}
         >
+          <CartesianGrid strokeDasharray="3 3" fill="white" />
+          <Tooltip cursor={{ fill: 'transparent' }} />
+          <CartesianGrid strokeDasharray="3 3" fill="white" />
           <XAxis
             dataKey="name"
             tick={{ fontSize: 10 }}
@@ -115,14 +119,9 @@ export default class DepositeChart extends PureComponent {
             dx={-10}
           />
           <YAxis yAxisId="right" orientation="right" />
-          <CartesianGrid
-            stroke="#000000"
-            fill="white"
-            vertical={false}
-            strokeWidth={0.5}
-          />
-          <Tooltip cursor={{ fill: 'transparent' }} />
-          <Bar type="number" fill="#4E81BD" dataKey="uv" barSize={5} />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="uv" fill="#82ca9d" />
         </BarChart>
       </ResponsiveContainer>
     );

@@ -92,10 +92,6 @@ export default class IncomeChart extends PureComponent {
 }
 
 class RenderLegend extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { data } = this.props;
 

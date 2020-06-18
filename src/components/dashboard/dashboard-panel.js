@@ -37,7 +37,7 @@ const PanelBoxes = styled.div`
   }
 
   .user-title {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -61,9 +61,9 @@ function DashboardPanel() {
     <DashboardPanelWrapper>
       <PanelBoxes
         style={{
-          height: '185px',
+          height: '155px',
           backgroundColor: '#F98229',
-          padding: '25px 30px',
+          padding: '20px 30px',
         }}
       >
         <p className="user-title"> ID&nbsp;#1869245781</p>

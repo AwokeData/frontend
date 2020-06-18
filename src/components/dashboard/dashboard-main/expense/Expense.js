@@ -18,7 +18,8 @@ const Header = styled.div`
 const Gross = styled.div`
   margin-top: 50px;
   .active-title {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -32,15 +33,16 @@ const Gross = styled.div`
   }
 
   .price {
-    font-family: Poppins-SemiBold;
+    font-family: sans-serif;
+    font-weight: normal;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: Poppins-Regular;
-    font-size: 14px;
+    font-family: sans-serif;
     font-weight: normal;
+    font-size: 14px;
     margin: 0;
   }
 
@@ -77,13 +79,15 @@ const AmountExpense = styled.div`
       .expense-price {
         margin-top: 20px;
         margin-bottom: 15px;
-        font-family: Poppins-SemiBold;
+        font-family: sans-serif;
+        font-weight: normal;
         font-size: 28px;
         text-align: center;
       }
 
       .description {
-        font-family: Poppins-Regular;
+        font-family: sans-serif;
+        font-weight: normal;
         font-size: 14px;
         text-align: center;
       }

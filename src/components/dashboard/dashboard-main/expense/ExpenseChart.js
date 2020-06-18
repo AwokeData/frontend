@@ -14,10 +14,7 @@ export default class ExpenseChart extends PureComponent {
   render() {
     return (
       <ResponsiveContainer width="95%" height={150}>
-        <PieChart
-          onMouseEnter={this.onPieEnter}
-          style={{ backgroundColor: 'white', margin: 10 }}
-        >
+        <PieChart onMouseEnter={this.onPieEnter} style={{ margin: 10 }}>
           <Pie
             data={data}
             cx={75}

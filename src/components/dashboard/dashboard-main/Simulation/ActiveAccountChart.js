@@ -123,6 +123,7 @@ export default class ActiveAccountChart extends PureComponent {
             bottom: 0,
           }}
         >
+          <CartesianGrid fill="white" strokeDasharray="3 3" />
           <XAxis dataKey="name" tickLine={false} interval={0} fontSize={9} />
           <YAxis
             ticks={[0, 500.0, 1000.0, 1500.0, 2000.0, 2500.0, 3000.0]}
@@ -133,21 +134,8 @@ export default class ActiveAccountChart extends PureComponent {
             dx={-10}
           />
           <YAxis yAxisId="right" width={20} orientation="right" />
-          <CartesianGrid
-            vertical={false}
-            stroke="#000000"
-            fill="white"
-            strokeWidth={0.5}
-          />
           <Tooltip />
-          <Area
-            type="number"
-            dataKey="uv"
-            stroke="#4E81BD"
-            strokeWidth={1}
-            fill="#4E81BD"
-            dot={false}
-          />
+          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
       </ResponsiveContainer>
     );

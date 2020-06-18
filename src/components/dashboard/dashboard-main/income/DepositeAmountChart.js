@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import {
   ResponsiveContainer,
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -11,7 +11,7 @@ import {
 
 const data = [
   {
-    name: '$500.00',
+    name: '$-500.00',
     uv: 0,
   },
   {
@@ -46,7 +46,7 @@ export default class DepositeAmountChart extends PureComponent {
   render() {
     return (
       <ResponsiveContainer width="100%" height={300}>
-        <LineChart
+        <AreaChart
           data={data}
           margin={{
             top: 5,
@@ -55,12 +55,7 @@ export default class DepositeAmountChart extends PureComponent {
             bottom: 5,
           }}
         >
-          <CartesianGrid
-            vertical={false}
-            fill="white"
-            stroke="#000000"
-            strokeWidth={1}
-          />
+          <CartesianGrid fill="white" strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis
             tickLine={false}
@@ -68,14 +63,8 @@ export default class DepositeAmountChart extends PureComponent {
             ticks={[0, 10, 20, 30, 40, 50, 60]}
           />
           <Tooltip />
-          <Line
-            type="monotone"
-            dataKey="uv"
-            stroke="#4E81BD"
-            strokeWidth={4}
-            dot={false}
-          />
-        </LineChart>
+          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+        </AreaChart>
       </ResponsiveContainer>
     );
   }
