@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Grid, Label, Card } from 'semantic-ui-react';
 import ActivateChart from './ActivateChart';
 import WeeklyChart from './WeeklyChart';
-import AreaFillChart from './AreaFillChart';
 
 const Header = styled.div`
   .title {
@@ -142,25 +141,6 @@ const Weekly = styled.div`
   }
 `;
 
-const Area = styled.div`
-  .ui.card {
-    width: 100%;
-    border-radius: 25px;
-    box-shadow: none;
-
-    .content {
-      background-color: #f5f5f5;
-      border-radius: 0px 0px 25px 25px !important;
-    }
-
-    .chart-header {
-      padding-left: 30px;
-      background-color: #eceef4;
-      border-radius: 25px 25px 0px 0px !important;
-    }
-  }
-`;
-
 export default function OverView() {
   return (
     <>
@@ -262,22 +242,6 @@ export default function OverView() {
           </Grid.Row>
         </Grid>
       </Weekly>
-      <Area>
-        <Grid columns={1}>
-          <Grid.Row>
-            <Grid.Column width={12} style={{ margin: '0 auto' }}>
-              <Card>
-                <Card.Content className="chart-header">
-                  <Card.Header>Area Chart</Card.Header>
-                </Card.Content>
-                <Card.Content>
-                  <AreaFillChart />
-                </Card.Content>
-              </Card>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Area>
     </>
   );
 }

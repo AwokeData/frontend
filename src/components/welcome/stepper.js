@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import icon from '../../images/btn-arrow-orange.png';
 
 const StepperDiv = styled.section`
   h3 {
@@ -25,7 +24,8 @@ const StepperDiv = styled.section`
       width: 13px;
       height: 13px;
       position: absolute;
-      background-image: url(${icon});
+      background-image: url(${process.env.PUBLIC_URL +
+      '/imgs/btn-arrow-orange.png'});
       background-size: cover;
       background-position: center;
       left: 90px;
@@ -41,7 +41,7 @@ const StepperDiv = styled.section`
     text-align: left;
     border-radius: 10px;
 
-    padding: 130px 30px 90px;
+    padding: 50px 30px 90px;
     position: relative;
 
     flex-basis: 33.3%;
@@ -50,8 +50,10 @@ const StepperDiv = styled.section`
     color: black;
 
     .stepper-img {
+      display: flex;
+      justify-content: center;
       img {
-        width: 60px;
+        width: 128px;
       }
     }
 
@@ -99,7 +101,12 @@ const Stepper = () => (
       </h3>
       <div className="flex-box step-box">
         <div className="step item">
-          <div className="stepper-img"></div>
+          <div className="stepper-img">
+            <img
+              src={process.env.PUBLIC_URL + '/imgs/easy_setup.png'}
+              alt="logo"
+            />
+          </div>
           <h5>Easy Setup and Onboarding</h5>
           <p>
             Whether you integrate our API into your business ecosystem, or use
@@ -109,17 +116,25 @@ const Stepper = () => (
           <Link>Get Started</Link>
         </div>
         <div className="step item">
-          <div className="stepper-img"></div>
+          <div className="stepper-img">
+            <img
+              src={process.env.PUBLIC_URL + '/imgs/encryption.png'}
+              alt="logo"
+            />
+          </div>
           <h5>Encryption and Security</h5>
           <p>
             We don’t keep the borrower’s data, and we encrypt everything to
             ensure only your team has access.
           </p>
-          <Link>Get Started</Link>
+          <Link>Learn More</Link>
         </div>
         <div className="step item">
           <div className="stepper-img">
-            <img src={process.env.PUBLIC_URL + '/easy_setup.png'} alt="logo" />
+            <img
+              src={process.env.PUBLIC_URL + '/imgs/complete.png'}
+              alt="logo"
+            />
           </div>
 
           <h5>Complete Customization</h5>
@@ -127,7 +142,7 @@ const Stepper = () => (
             Create a credit application through us, or simply use our
             analyticals for your underwriting
           </p>
-          <Link>Get Started</Link>
+          <Link>Learn More</Link>
         </div>
       </div>
     </div>

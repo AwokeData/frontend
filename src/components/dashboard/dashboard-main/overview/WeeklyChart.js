@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import {
   ResponsiveContainer,
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -84,27 +84,21 @@ const data = [
   },
 ];
 
-class CustomizedAxisTick extends PureComponent {
-  render() {
-    const { x, y, payload } = this.props;
+const gradientOffset = () => {
+  const dataMax = Math.max(...data.map((i) => i.uv));
+  const dataMin = Math.min(...data.map((i) => i.uv));
 
-    return (
-      <g transform={`translate(${x},${y})`}>
-        <text
-          x={-10}
-          y={0}
-          dy={-5}
-          fontSize={11}
-          textAnchor="start"
-          fill="#666"
-          transform="rotate(-45)"
-        >
-          {payload.value}
-        </text>
-      </g>
-    );
+  if (dataMax <= 0) {
+    return 0;
   }
-}
+  if (dataMin >= 0) {
+    return 1;
+  }
+
+  return dataMax / (dataMax - dataMin);
+};
+
+const off = gradientOffset();
 
 export default class WeeklyChart extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
@@ -112,21 +106,17 @@ export default class WeeklyChart extends PureComponent {
   render() {
     return (
       <ResponsiveContainer width="100%" height={272}>
-        <LineChart
+        <AreaChart
           data={data}
-          padding={{
-            top: 0,
-            right: 10,
-            left: 10,
+          margin={{
+            top: 10,
+            right: 0,
+            left: 0,
             bottom: 0,
           }}
         >
-          <XAxis
-            dataKey="name"
-            tickLine={false}
-            interval={0}
-            tick={<CustomizedAxisTick />}
-          />
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" tickLine={false} interval={0} fontSize={10} />
           <YAxis
             ticks={[
               -1000.0,
@@ -147,16 +137,20 @@ export default class WeeklyChart extends PureComponent {
             dx={-10}
           />
           <YAxis yAxisId="right" orientation="right" />
-          <CartesianGrid stroke="#000000" strokeWidth={0.5} />
           <Tooltip />
-          <Line
-            type="number"
+          <defs>
+            <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
+              <stop offset={off} stopColor="green" stopOpacity={1} />
+              <stop offset={off} stopColor="red" stopOpacity={1} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
             dataKey="uv"
-            stroke="#4E81BD"
-            strokeWidth={5}
-            dot={false}
+            stroke="#000"
+            fill="url(#splitColor)"
           />
-        </LineChart>
+        </AreaChart>
       </ResponsiveContainer>
     );
   }

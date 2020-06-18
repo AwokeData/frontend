@@ -13,8 +13,8 @@ export default class ExpenseChart extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="95%" height={150}>
-        <PieChart onMouseEnter={this.onPieEnter} style={{ margin: 10 }}>
+      <ResponsiveContainer width="100%" height={150}>
+        <PieChart onMouseEnter={this.onPieEnter} style={{ marginTop: 10 }}>
           <Pie
             data={data}
             cx={75}
@@ -39,7 +39,7 @@ export default class ExpenseChart extends PureComponent {
             align="right"
             iconType="circle"
             content={renderLegend}
-            wrapperStyle={{ width: '60%', top: 21, right: '8%' }}
+            wrapperStyle={{ width: '60%', top: 21, right: '5%' }}
           />
         </PieChart>
       </ResponsiveContainer>
@@ -51,7 +51,7 @@ const renderLegend = (props) => {
   const { payload } = props;
 
   return (
-    <ul>
+    <ul style={{ marginLeft: 10 }}>
       {payload.map((entry, index) => (
         <li
           key={`item-${index}`}

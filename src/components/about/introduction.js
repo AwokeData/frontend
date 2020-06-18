@@ -24,7 +24,7 @@ const IntroductionWrapper = styled.section`
     position: absolute;
     bottom: 13px;
     right: 0;
-    width: 50vw;
+    width: 45vw;
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,7 +108,7 @@ const Intro = () => (
     <div className="blob"></div>
     <img
       className="main-img"
-      src={process.env.PUBLIC_URL + '/imgs/homeinfo.png'}
+      src={process.env.PUBLIC_URL + '/imgs/aboutinfo.png'}
       alt="astronaunt floating in space"
     />
     <div className="flex-box two-items container">
@@ -116,8 +116,7 @@ const Intro = () => (
         <div></div>
       </div>
       <div className="item left">
-        <h2>We are underwriting the future</h2>
-        <p>Introducing alternative data to lenders small or large.</p>
+        <h2>About Us</h2>
       </div>
     </div>
   </IntroductionWrapper>

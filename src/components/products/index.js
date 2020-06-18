@@ -1,14 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Button } from 'semantic-ui-react';
 
 import CallToAction from '../call-to-action';
-
-import circle from '../../images/product-circle.png';
-import leftg from '../../images/product-leftg.png';
-import rightg from '../../images/product-rightg.png';
-import triangle from '../../images/product-triangle.png';
-import heroRight from '../../images/product-right.png';
-import tempimg from '../../images/temp.png';
 
 const ProductWrapper = styled.div`
   position: relative;
@@ -19,7 +13,8 @@ const ProductWrapper = styled.div`
     left: 4%;
     width: 100px;
     height: 100px;
-    background-image: url(${triangle});
+    background-image: url(${process.env.PUBLIC_URL +
+    '/imgs/product-triangle.png'});
     background-position: center;
     background-size: cover;
     opacity: 0.8;
@@ -42,7 +37,8 @@ const ProductSectionTitle = styled.section`
     left: -300px;
     width: 600px;
     height: 600px;
-    background-image: url(${circle});
+    background-image: url(${process.env.PUBLIC_URL +
+    '/iimgs/product-circle.png'});
     background-position: center;
     background-size: cover;
     opacity: 0.8;
@@ -55,7 +51,8 @@ const ProductSectionTitle = styled.section`
     right: 0;
     width: 650px;
     height: 666px;
-    background-image: url(${heroRight});
+    background-image: url(${process.env.PUBLIC_URL +
+    '/imgs/product-right.png'});
     background-position: center;
     background-size: cover;
     opacity: 0.8;
@@ -151,7 +148,8 @@ const ProductSectionContent = styled.section`
     left: 0;
     width: 230px;
     height: 245px;
-    background-image: url(${leftg});
+    background-image: url(${process.env.PUBLIC_URL +
+    '/imgs/product-leftg.png'});
     background-position: center;
     background-size: contain;
     z-index: -1;
@@ -166,7 +164,8 @@ const ProductSectionContent = styled.section`
     background-size: contain;
     z-index: -1;
     transform: translate(40%, 25%);
-    background-image: url(${rightg});
+    background-image: url(${process.env.PUBLIC_URL +
+    '/imgs/product-rightg.png'});
     bottom: 0;
     right: 0;
   }
@@ -212,9 +211,7 @@ const Product = () => (
               and volatility.
             </h2>
           </div>
-          <div className="item right">
-            <img src={tempimg} alt="temporary img" />
-          </div>
+          <div className="item right"></div>
         </div>
       </div>
     </ProductSectionTitle>
@@ -225,29 +222,37 @@ const Product = () => (
         <div className="flex-box">
           <div className="leftg-img"></div>
           <div className="item">
-            <img src={tempimg} alt="temporary img" />
-            <h3>Product 1</h3>
+            <img
+              src={process.env.PUBLIC_URL + '/imgs/temp.png'}
+              alt="temporary img"
+            />
+            <h3>Account Analytics</h3>
             <p>
               Whether you integrate our API into your business ecosystem, or use
               our interface to face your client, our onboarding team is here for
               you.
             </p>
+            <Button className="primary-button fullscreen-btn">Submit</Button>
           </div>
           <div className="item">
             <div className="rightg-img"></div>
-            <img src={tempimg} alt="temporary img" />
-            <h3>Product 2</h3>
+            <img
+              src={process.env.PUBLIC_URL + '/imgs/temp.png'}
+              alt="temporary img"
+            />
+            <h3>Simulations & Scenarios</h3>
             <p>
               Loan simulations, stochastic stresses, and machine learning. We
               learn your borrower’s behavior and provide you the limits of their
-              payment probability.{' '}
+              payment probability.
             </p>
+            <Button className="primary-button fullscreen-btn">Submit</Button>
           </div>
           <div className="rightg-img"></div>
         </div>
       </div>
     </ProductSectionContent>
-    <CallToAction type="question" />
+    <CallToAction />
   </ProductWrapper>
 );
 

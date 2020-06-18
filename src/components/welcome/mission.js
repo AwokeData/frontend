@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import icon from '../../images/list-icon.png';
-import { Button } from 'semantic-ui-react';
 
 const IntroMissionSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: black;
+  padding: 0;
+  height: 70vh !important;
 
   text-align: left;
 
@@ -73,7 +73,7 @@ const StyledList = styled.ul`
     width: 30px;
     height: 30px;
     position: absolute;
-    background-image: url(${icon});
+    background-image: url(${process.env.PUBLIC_URL + '/imgs/list-icon.png'});
     background-size: cover;
     background-position: center;
     left: -50px;
