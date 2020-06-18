@@ -13,7 +13,6 @@ const DashboardPanelWrapper = styled.div`
   text-align: left;
   color: white;
   flex-basis: 18%;
-  overflow-x: hidden;
 `;
 
 const PanelBoxes = styled.div`
@@ -22,9 +21,31 @@ const PanelBoxes = styled.div`
   margin-bottom: 20px;
   height: 81px;
 
+  .active-bar {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
   &.active {
     background-color: white;
     color: black;
+    position: relative;
+    .active-bar {
+      display: block;
+      position: absolute;
+      left: -20px;
+      top: 22px;
+    }
+
+    .icon {
+      display: block;
+      float: left;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
 
     &:hover {
       background-color: white;
@@ -75,6 +96,17 @@ function DashboardPanel() {
         className={active === 'overview' ? 'active' : ''}
         onClick={() => setActive('overview')}
       >
+        <img
+          className="active-bar"
+          src={process.env.PUBLIC_URL + '/imgs/active-bar.png'}
+          alt="bar"
+        />
+        <img
+          width="30"
+          className="icon"
+          src={process.env.PUBLIC_URL + '/imgs/overview.png'}
+          alt="bar"
+        />
         <p className="menu-title">Overview</p>
       </PanelBoxes>
       <PanelBoxes
@@ -82,6 +114,17 @@ function DashboardPanel() {
         className={active === 'expense' ? 'active' : ''}
         onClick={() => setActive('expense')}
       >
+        <img
+          className="active-bar"
+          src={process.env.PUBLIC_URL + '/imgs/active-bar.png'}
+          alt="bar"
+        />
+        <img
+          width="30"
+          className="icon"
+          src={process.env.PUBLIC_URL + '/imgs/expense.png'}
+          alt="bar"
+        />
         <p className="menu-title">Expense</p>
       </PanelBoxes>
       <PanelBoxes
@@ -89,6 +132,17 @@ function DashboardPanel() {
         className={active === 'income' ? 'active' : ''}
         onClick={() => setActive('income')}
       >
+        <img
+          className="active-bar"
+          src={process.env.PUBLIC_URL + '/imgs/active-bar.png'}
+          alt="bar"
+        />
+        <img
+          width="30"
+          className="icon"
+          src={process.env.PUBLIC_URL + '/imgs/income.png'}
+          alt="bar"
+        />
         <p className="menu-title"> Income</p>
       </PanelBoxes>
       <PanelBoxes
@@ -96,6 +150,17 @@ function DashboardPanel() {
         className={active === 'credit' ? 'active' : ''}
         onClick={() => setActive('credit')}
       >
+        <img
+          className="active-bar"
+          src={process.env.PUBLIC_URL + '/imgs/active-bar.png'}
+          alt="bar"
+        />
+        <img
+          width="30"
+          className="icon"
+          src={process.env.PUBLIC_URL + '/imgs/credit.png'}
+          alt="bar"
+        />
         <p className="menu-title"> Credit</p>
       </PanelBoxes>
       <PanelBoxes
@@ -103,6 +168,17 @@ function DashboardPanel() {
         className={active === 'simulation' ? 'active' : ''}
         onClick={() => setActive('simulation')}
       >
+        <img
+          className="active-bar"
+          src={process.env.PUBLIC_URL + '/imgs/active-bar.png'}
+          alt="bar"
+        />
+        <img
+          width="30"
+          className="icon"
+          src={process.env.PUBLIC_URL + '/imgs/simulation.png'}
+          alt="bar"
+        />
         <p className="menu-title"> Simulation</p>
       </PanelBoxes>
       <PanelBoxes
@@ -110,6 +186,11 @@ function DashboardPanel() {
         className={active === 'stressTesting' ? 'active' : ''}
         onClick={() => setActive('stressTesting')}
       >
+        <img
+          className="active-bar"
+          src={process.env.PUBLIC_URL + '/imgs/active-bar.png'}
+          alt="bar"
+        />
         <p className="menu-title"> Stress Testing</p>
       </PanelBoxes>
     </DashboardPanelWrapper>

@@ -58,13 +58,6 @@ class NavBar extends React.Component {
             active={activeItem === 'products'}
             onClick={this.handleItemClick}
           />
-          <Menu.Item
-            as={Link}
-            to={'/dashboard'}
-            name="dashboard"
-            active={activeItem === 'dashboard'}
-            onClick={this.handleItemClick}
-          />
           <Menu.Menu position="right">
             <Menu.Item
               name="sign up"

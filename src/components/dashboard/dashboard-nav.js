@@ -65,7 +65,7 @@ class DashboardNav extends React.Component {
           />
           <Menu.Item
             as={Link}
-            to={`${ROOT}/user/id`}
+            to={`${ROOT}/user/id/overview`}
             name="USER 1869245781"
             className="dashboard-item"
             active={activeItem === 'user'}
@@ -77,10 +77,12 @@ class DashboardNav extends React.Component {
               as={Link}
               active={activeItem === 'login'}
               onClick={this.handleItemClick}
+              style={{ marginLeft: 0, marginRight: 20 }}
               className="login"
               to="/login"
             >
-              <Image src="/images/wireframe/square-image.png" avatar />
+              <Image src={process.env.PUBLIC_URL + '/imgs/avatar.png'} avatar />{' '}
+              LOGOUT
             </Menu.Item>
           </Menu.Menu>
         </Menu>

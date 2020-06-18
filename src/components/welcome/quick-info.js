@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import { ROUTE_ROOT } from '../../utils/constants';
 
 const IntroMissionSection = styled.section`
   display: flex;
@@ -93,7 +92,7 @@ const QuickInfo = () => (
         <Button
           className="primary-button fullscreen-btn"
           as={Link}
-          to={`${ROUTE_ROOT}/dashboard`}
+          to={'/dashboard'}
         >
           See an Example
         </Button>
