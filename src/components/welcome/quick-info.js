@@ -9,7 +9,7 @@ const IntroMissionSection = styled.section`
   justify-content: center;
   color: black;
   padding: 0;
-  height: 90vh !important;
+  height: 85vh !important;
 
   text-align: left;
 
@@ -18,7 +18,7 @@ const IntroMissionSection = styled.section`
   text-align: left;
 
   h2 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   h3 {

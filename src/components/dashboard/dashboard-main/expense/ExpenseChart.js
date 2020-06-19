@@ -70,9 +70,9 @@ const renderLegend = (props) => {
             }}
           >
             <circle
-              class="progress-ring__circle"
+              className="progress-ring__circle"
               stroke={COLORS[index % COLORS.length]}
-              stroke-width="8"
+              strokeWidth="8"
               fill="transparent"
               r="8"
               cx="12"

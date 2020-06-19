@@ -29,7 +29,7 @@ const ProductSectionTitle = styled.section`
   margin-top: -75px;
   background-color: #eff9fb;
   z-index: 1;
-  min-height: 90vh;
+  min-height: 80vh;
 
   .circle-img {
     position: absolute;
@@ -74,7 +74,7 @@ const ProductSectionTitle = styled.section`
   }
 
   h2 {
-    font-size: 50px;
+    font-size: 45px;
     text-align: left;
     z-index: 2;
   }
@@ -119,7 +119,7 @@ const ProductSectionContent = styled.section`
   }
 
   .item {
-    padding: 35px;
+    padding: 30px;
     border-radius: 10px;
     flex-grow: 1;
     background-color: white;
@@ -131,7 +131,7 @@ const ProductSectionContent = styled.section`
     box-shadow: -2px 18px 27px -19px rgba(107, 107, 107, 1);
 
     h3 {
-      font-size: 30px;
+      font-size: 28px;
       font-weight: bold;
       line-height: 1.2;
     }

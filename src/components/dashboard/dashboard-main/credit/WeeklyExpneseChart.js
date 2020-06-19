@@ -78,7 +78,7 @@ export default class WeeklyExpenseChart extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" height={290}>
+      <ResponsiveContainer width="100%" height={285}>
         <LineChart
           data={data}
           padding={{

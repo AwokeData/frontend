@@ -130,7 +130,7 @@ export default class ActivateChart extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={280}>
         <LineChart
           data={data}
           margin={{

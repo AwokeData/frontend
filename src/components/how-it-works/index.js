@@ -17,10 +17,13 @@ const HowItWorksSection = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   @media screen and (min-width: 1700px) {
-    background-position: 0% 5%;
+    background-position: 0% -10%;
+  }
+  @media screen and (max-width: 1700px) {
+    background-position: 0% -5%;
   }
   @media screen and (max-width: 1600px) {
-    background-position: 0% 1%;
+    background-position: 0% 0%;
   }
   @media screen and (max-width: 1500px) {
     background-position: 0% 5%;
@@ -34,6 +37,8 @@ const HowItWorksSection = styled.div`
 `;
 
 const HowItWorksSectionTitle = styled.section`
+  padding-top: 50px;
+
   .title {
     height: 400px;
     display: flex;
@@ -41,7 +46,7 @@ const HowItWorksSectionTitle = styled.section`
   }
 
   h1 {
-    font-size: 65px !important;
+    font-size: 60px !important;
     text-align: left;
   }
 
@@ -67,11 +72,11 @@ const HowItWorksSectionContent = styled.section`
   .flex-box {
     justify-content: space-around;
     align-items: center;
-    margin: 40px 80px 40px 0;
+    margin: 30px 80px 30px 0;
 
     &.flip {
       text-align: right;
-      margin: 40px 0 40px 80px;
+      margin: 30px 0 30px 80px;
     }
   }
 

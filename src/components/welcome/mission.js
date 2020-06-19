@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form, Button } from 'semantic-ui-react';
 import styled from 'styled-components';
 
 const IntroMissionSection = styled.section`
@@ -7,7 +8,7 @@ const IntroMissionSection = styled.section`
   justify-content: center;
   color: black;
   padding: 0;
-  height: 70vh !important;
+  height: 65vh !important;
 
   text-align: left;
 
@@ -16,7 +17,7 @@ const IntroMissionSection = styled.section`
   text-align: left;
 
   h2 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   h3 {
@@ -26,7 +27,21 @@ const IntroMissionSection = styled.section`
   .left {
     align-self: center;
     margin-bottom: 30px;
-    margin-right: 10%;
+    width: 85%;
+
+    p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .ui.input {
+      margin-top: 20px;
+      height: 48px;
+      border: 1px solid darkgray;
+      border-radius: 5px;
+      width: 50% !important;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+    }
   }
   .right {
     align-self: center;
@@ -37,8 +52,8 @@ const IntroMissionSection = styled.section`
   }
 
   @media screen and (max-width: 850px) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 30px;
+    margin: 30px 0;
 
     .flex-box {
       flex-direction: column-reverse;
@@ -48,7 +63,11 @@ const IntroMissionSection = styled.section`
     }
 
     .left {
-      margin: -20px 0 0;
+      width: 100%;
+
+      .ui.input {
+        width: 100% !important;
+      }
     }
   }
 
@@ -85,7 +104,7 @@ const StyledList = styled.ul`
     margin-bottom: 10px;
     line-height: 1.2;
     font-family: 'Poppins';
-    font-size: 22px;
+    font-size: 20px;
   }
 
   p {
@@ -101,6 +120,18 @@ const Mission = () => (
   <IntroMissionSection className="mission">
     <div className="flex-box container">
       <div className="item left">
+        <h3>What we offer</h3>
+        <p>Still underwriting your borrowers with W2s and paystubs?</p>
+        <p>Modernize your business with advanced analytics on your</p>
+        <p>client’s payment behavior.</p>
+        <Form>
+          <Form.Input placeholder="Your Email" />
+          <Button className="primary-button fullscreen-btn" type="submit">
+            SUBMIT
+          </Button>
+        </Form>
+      </div>
+      <div className="item right">
         <StyledList>
           <li>
             <h6>Borrower Behavioral Analysis</h6>
@@ -124,14 +155,6 @@ const Mission = () => (
             </p>
           </li>
         </StyledList>
-      </div>
-      <div className="item right">
-        <h3>What we offer</h3>
-        <p>
-          Still underwriting your borrowers with W2s and paystubs? Modernize
-          your business with advanced analytics on your client’s payment
-          behavior.
-        </p>
       </div>
     </div>
   </IntroMissionSection>

@@ -11,7 +11,7 @@ const Header = styled.div`
   .title {
     font-family: 'Poppins';
     font-weight: Bold;
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 20px;
   }
 `;
@@ -21,7 +21,7 @@ const Gross = styled.div`
   .active-title {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 15px;
   }
 
@@ -36,14 +36,14 @@ const Gross = styled.div`
   .price {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 7px;
   }
 
   .price-explain {
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
 
@@ -65,7 +65,7 @@ const Gross = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -88,14 +88,14 @@ const AmountExpense = styled.div`
         margin-bottom: 15px;
         font-family: 'Poppins';
         font-weight: 600;
-        font-size: 28px;
+        font-size: 26px;
         text-align: center;
       }
 
       .description {
         font-family: 'Poppins';
         font-weight: normal;
-        font-size: 14px;
+        font-size: 12px;
         text-align: center;
       }
     }
@@ -108,7 +108,7 @@ const AmountExpense = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -135,7 +135,7 @@ const Alternate = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -164,7 +164,7 @@ const Category = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -173,7 +173,7 @@ const Category = styled.div`
     thead th {
       font-weight: normal !important;
       font-family: 'Poppins';
-      font-size: 15px;
+      font-size: 13px;
     }
 
     tbody td:nth-child(1),
@@ -181,7 +181,7 @@ const Category = styled.div`
     td:nth-child(3),
     td:nth-child(4) {
       font-family: 'Poppins';
-      font-size: 17px;
+      font-size: 15px;
       font-weight: Bold;
     }
   }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const StepperDiv = styled.section`
+  height: 95vh;
   h3 {
     text-align: left;
     margin-bottom: 50px;
@@ -80,7 +81,7 @@ const StepperDiv = styled.section`
 
   @media screen and (max-width: 650px) {
     h5 {
-      font-size: 16px;
+      font-size: 14px;
       margin: 20px 0;
     }
     .step-box {
@@ -113,7 +114,7 @@ const Stepper = () => (
             our interface to face your client, our onboarding team is here for
             you.
           </p>
-          <Link>Get Started</Link>
+          <Link to="/">Get Started</Link>
         </div>
         <div className="step item">
           <div className="stepper-img">
@@ -127,7 +128,7 @@ const Stepper = () => (
             We don’t keep the borrower’s data, and we encrypt everything to
             ensure only your team has access.
           </p>
-          <Link>Learn More</Link>
+          <Link to="/">Learn More</Link>
         </div>
         <div className="step item">
           <div className="stepper-img">
@@ -142,7 +143,7 @@ const Stepper = () => (
             Create a credit application through us, or simply use our
             analyticals for your underwriting
           </p>
-          <Link>Learn More</Link>
+          <Link to="/">Learn More</Link>
         </div>
       </div>
     </div>

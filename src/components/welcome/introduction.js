@@ -2,27 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const IntroductionWrapper = styled.section`
-  height: calc(100vh - 200px);
+  height: calc(75vh);
   width: 100vw;
   position: relative;
   padding: 0;
-
-  .blob {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-image: url(${process.env.PUBLIC_URL + '/imgs/slant-bg.png'});
-    width: 100vw;
-    height: 80vh;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  background-image: url(${process.env.PUBLIC_URL + '/imgs/slant-bg.png'});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .main-img {
     position: absolute;
-    bottom: 13px;
+    bottom: 0;
     right: 0;
     width: 50vw;
     height: auto;
@@ -49,7 +39,7 @@ const IntroductionWrapper = styled.section`
 
     p {
       font-family: 'Poppins';
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
@@ -107,7 +97,6 @@ const IntroductionWrapper = styled.section`
 
 const Intro = () => (
   <IntroductionWrapper>
-    <div className="blob"></div>
     <img
       className="main-img"
       src={process.env.PUBLIC_URL + '/imgs/homeinfo.png'}

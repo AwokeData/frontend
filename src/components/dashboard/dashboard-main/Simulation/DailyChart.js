@@ -84,7 +84,6 @@ export default class DailyChart extends PureComponent {
           />
           <Tooltip />
           <Area
-            type="number"
             dataKey="amt"
             stackId="1"
             stroke="#99A0C2"
@@ -92,14 +91,12 @@ export default class DailyChart extends PureComponent {
             fill="white"
           />
           <Line
-            type="number"
             dataKey="Average"
             stroke="#78C2A7"
             strokeWidth={2}
             dot={false}
           />
           <Area
-            type="number"
             dataKey="Temperature"
             stackId="1"
             stroke="#99A0C2"

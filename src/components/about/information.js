@@ -3,8 +3,10 @@ import { Container, Grid, Header } from 'semantic-ui-react';
 import styled from 'styled-components';
 
 const InformationSection = styled.section`
+  padding: 25px;
+
   h1.ui.header {
-    font-size: 48px;
+    font-size: 46px;
     width: 70%;
     margin: 0 auto;
   }
@@ -20,7 +22,7 @@ const InformationSection = styled.section`
 
   .column {
     p {
-      font-size: 18px;
+      font-size: 16px;
       text-align: left;
     }
   }
@@ -68,7 +70,7 @@ export default function Information() {
                 alignItems: 'center',
               }}
             >
-              <img src={process.env.PUBLIC_URL + '/imgs/temp.png'} />
+              <img src={process.env.PUBLIC_URL + '/imgs/temp.png'} alt="temp" />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -81,7 +83,7 @@ export default function Information() {
                 alignItems: 'center',
               }}
             >
-              <img src={process.env.PUBLIC_URL + '/imgs/temp.png'} />
+              <img src={process.env.PUBLIC_URL + '/imgs/temp.png'} alt="temp" />
             </Grid.Column>
             <Grid.Column>
               <Header as="h3">Our Experience</Header>

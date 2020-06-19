@@ -10,7 +10,7 @@ const Header = styled.div`
   .title {
     font-family: 'Poppins';
     font-weight: Bold;
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 20px;
   }
 `;
@@ -23,20 +23,20 @@ const Deposite = styled.div`
     background-color: rgb(245, 245, 245);
     border-radius: 25px;
     padding: 20px 30px 20px 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .price {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 7px;
   }
 
   .price-explain {
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
 
@@ -58,7 +58,7 @@ const Deposite = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -85,7 +85,7 @@ const IncomeDeposite = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -104,14 +104,14 @@ const Estimate = styled.div`
   .price {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 7px;
   }
 
   .price-explain {
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
 `;
@@ -137,7 +137,7 @@ const Simple = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }

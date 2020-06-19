@@ -64,7 +64,7 @@ const PanelBoxes = styled.div`
   .user-title {
     font-family: 'Poppins';
     font-weight: Bold;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,7 +73,7 @@ const PanelBoxes = styled.div`
   .menu-title {
     font-family: 'Poppins';
     font-weight: Bold;
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 10px;
   }
 `;
@@ -130,7 +130,7 @@ function DashboardPanel() {
         <img
           width="30"
           className="icon"
-          src={process.env.PUBLIC_URL + '/imgs/expense.png'}
+          src={process.env.PUBLIC_URL + '/imgs/expenses.png'}
           alt="bar"
         />
         <p className="menu-title">Expense</p>

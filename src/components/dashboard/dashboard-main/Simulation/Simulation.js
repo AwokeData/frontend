@@ -35,7 +35,7 @@ const Loan = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -62,7 +62,7 @@ const ActiveAccount = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -89,7 +89,7 @@ const LoanIncome = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -101,14 +101,14 @@ const Stochastic = styled.div`
   .estimate-title {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 15px;
   }
 
   .active-title {
     font-family: sans-serif;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 15px;
   }
 
@@ -123,14 +123,14 @@ const Stochastic = styled.div`
   .price {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 7px;
   }
 
   .price-explain {
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
 
@@ -152,7 +152,7 @@ const Stochastic = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }

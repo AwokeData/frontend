@@ -175,12 +175,7 @@ export default class LoanChart extends PureComponent {
           />
           <YAxis yAxisId="right" width={20} orientation="right" />
           <Tooltip />
-          <Line
-            type="number"
-            dataKey="uv"
-            stroke="#8884d8"
-            activeDot={{ r: 8 }}
-          />
+          <Line dataKey="uv" stroke="#8884d8" activeDot={{ r: 8 }} />
         </LineChart>
       </ResponsiveContainer>
     );

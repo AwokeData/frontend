@@ -8,7 +8,7 @@ const Header = styled.div`
   .title {
     font-family: 'Poppins';
     font-weight: Bold;
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 20px;
   }
 `;
@@ -17,7 +17,7 @@ const Estimate = styled.div`
   .estimate-title {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 15px;
   }
 
@@ -31,14 +31,14 @@ const Estimate = styled.div`
   .price {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 7px;
   }
 
   .price-explain {
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
 `;
@@ -48,7 +48,7 @@ const Active = styled.div`
   .active-title {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 15px;
   }
 
@@ -63,14 +63,14 @@ const Active = styled.div`
   .price {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 7px;
   }
 
   .price-explain {
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
 
@@ -103,7 +103,7 @@ const Weekly = styled.div`
   .active-title {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 15px;
   }
 
@@ -118,14 +118,14 @@ const Weekly = styled.div`
   .price {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 7px;
   }
 
   .price-explain {
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
 
@@ -147,7 +147,7 @@ const Weekly = styled.div`
       .header {
         font-family: 'Poppins';
         font-weight: Bold;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Grid, Header, Form, Button } from 'semantic-ui-react';
 import styled from 'styled-components';
 
@@ -49,7 +49,7 @@ function CallToAction() {
     <ContactSection>
       <Container>
         <Grid columns={2}>
-          <Grid.Row celled>
+          <Grid.Row>
             <Grid.Column>
               <Header as="h1">Have More Questions?</Header>
               <Header as="h2">Speak to Our Sales Team</Header>

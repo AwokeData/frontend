@@ -87,15 +87,8 @@ export default class CategoryChart extends PureComponent {
             strokeWidth={1}
           />
           <Tooltip />
+          <Line dataKey="uv" stroke="#4E81BD" strokeWidth={2} dot={false} />
           <Line
-            type="number"
-            dataKey="uv"
-            stroke="#4E81BD"
-            strokeWidth={2}
-            dot={false}
-          />
-          <Line
-            type="number"
             dataKey="pv"
             stroke="#C0504D"
             strokeWidth={0}
