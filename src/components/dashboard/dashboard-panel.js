@@ -50,6 +50,10 @@ const PanelBoxes = styled.div`
     &:hover {
       background-color: white;
     }
+
+    .menu-title {
+      font-weight: Normal;
+    }
   }
 
   &:hover {
@@ -58,14 +62,18 @@ const PanelBoxes = styled.div`
   }
 
   .user-title {
-    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: Bold;
+    font-size: 24px;
     margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .menu-title {
-    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: Bold;
+    font-size: 24px;
     margin-top: 10px;
   }
 `;

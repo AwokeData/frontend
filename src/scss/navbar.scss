@@ -5,13 +5,13 @@
 
 #dashboard-nav {
   background-color: #384586;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 #navbar,
 #dashboard-nav {
   h1 {
     font-size: 24px;
+    font-family: 'Poppins';
     align-self: center;
     margin: 0 50px 0 0;
   }
@@ -31,7 +31,8 @@
   }
 
   .item {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
+    font-size: 16px;
 
     &:hover {
       color: $navy;

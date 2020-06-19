@@ -20,6 +20,18 @@ const DashboardNavWrapper = styled.nav`
 
   #primary-menu {
     max-width: none !important;
+
+    .item {
+      font-family: 'Poppins';
+      font-weight: Normal;
+      font-size: 16px;
+
+      h1 {
+        font-family: 'Poppins';
+        font-weight: Bold;
+        font-size: 24px;
+      }
+    }
   }
 `;
 
@@ -57,7 +69,6 @@ class DashboardNav extends React.Component {
           <Menu.Item
             as={Link}
             to={`${ROOT}/lender`}
-            style={{ marginLeft: 100 }}
             name="LENDER HOMEPAGE"
             className="dashboard-item"
             active={activeItem === 'lender'}

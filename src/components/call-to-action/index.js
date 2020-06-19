@@ -11,14 +11,21 @@ const ContactSection = styled.section`
   }
 
   h1.ui.header {
+    font-family: 'Poppins';
+    font-weight: Bold;
     font-size: 40px;
   }
 
   h2.ui.header {
+    font-family: 'Poppins';
+    font-weight: Bold;
     font-size: 30px;
   }
 
   .ui.button {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: normal;
     margin-top: 10px;
   }
 
@@ -57,7 +64,7 @@ function CallToAction() {
                 <Form.Input placeholder="Company Name" />
                 <Form.Input placeholder="Phone Number" />
                 <Button className="primary-button fullscreen-btn" type="submit">
-                  Submit
+                  SUBMIT
                 </Button>
               </Form>
             </Grid.Column>

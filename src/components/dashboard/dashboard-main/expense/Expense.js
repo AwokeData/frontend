@@ -9,7 +9,8 @@ import CategoryChart from './CategoryChart';
 
 const Header = styled.div`
   .title {
-    font-weight: Poppins-Bold;
+    font-family: 'Poppins';
+    font-weight: Bold;
     font-size: 36px;
     margin-bottom: 20px;
   }
@@ -18,8 +19,8 @@ const Header = styled.div`
 const Gross = styled.div`
   margin-top: 50px;
   .active-title {
-    font-family: sans-serif;
-    font-weight: normal;
+    font-family: 'Poppins';
+    font-weight: 600;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -28,19 +29,19 @@ const Gross = styled.div`
     width: 100%;
     background-color: rgb(245, 245, 245);
     border-radius: 25px;
-    padding: 15px 25px 15px 25px;
-    margin-bottom: 40px;
+    padding: 20px 30px 20px 30px;
+    margin-bottom: 30px;
   }
 
   .price {
-    font-family: sans-serif;
-    font-weight: normal;
+    font-family: 'Poppins';
+    font-weight: 600;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: sans-serif;
+    font-family: 'Poppins';
     font-weight: normal;
     font-size: 14px;
     margin: 0;
@@ -60,6 +61,12 @@ const Gross = styled.div`
       padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
+
+      .header {
+        font-family: 'Poppins';
+        font-weight: Bold;
+        font-size: 15px;
+      }
     }
   }
 `;
@@ -79,14 +86,14 @@ const AmountExpense = styled.div`
       .expense-price {
         margin-top: 20px;
         margin-bottom: 15px;
-        font-family: sans-serif;
-        font-weight: normal;
+        font-family: 'Poppins';
+        font-weight: 600;
         font-size: 28px;
         text-align: center;
       }
 
       .description {
-        font-family: sans-serif;
+        font-family: 'Poppins';
         font-weight: normal;
         font-size: 14px;
         text-align: center;
@@ -97,6 +104,12 @@ const AmountExpense = styled.div`
       padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
+
+      .header {
+        font-family: 'Poppins';
+        font-weight: Bold;
+        font-size: 15px;
+      }
     }
   }
 `;
@@ -118,6 +131,12 @@ const Alternate = styled.div`
       padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
+
+      .header {
+        font-family: 'Poppins';
+        font-weight: Bold;
+        font-size: 15px;
+      }
     }
   }
 `;
@@ -141,13 +160,19 @@ const Category = styled.div`
       padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
+
+      .header {
+        font-family: 'Poppins';
+        font-weight: Bold;
+        font-size: 15px;
+      }
     }
   }
 
   .ui.basic.table {
     thead th {
-      font-weight: 400 !important;
-      font-family: Poppins;
+      font-weight: normal !important;
+      font-family: 'Poppins';
       font-size: 15px;
     }
 
@@ -155,6 +180,7 @@ const Category = styled.div`
     td:nth-child(2),
     td:nth-child(3),
     td:nth-child(4) {
+      font-family: 'Poppins';
       font-size: 17px;
       font-weight: Bold;
     }

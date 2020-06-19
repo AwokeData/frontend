@@ -8,7 +8,8 @@ import MonthlyCreditCardChart from './MonthlyCreditCardChart.js';
 
 const Header = styled.div`
   .title {
-    font-weight: Poppins-Bold;
+    font-family: 'Poppins';
+    font-weight: Bold;
     font-size: 36px;
     margin-bottom: 20px;
   }
@@ -18,15 +19,15 @@ const CreditDom = styled.div`
   margin-top: 50px;
 
   .estimate-title {
-    font-family: sans-serif;
-    font-weight: normal;
+    font-family: 'Poppins';
+    font-weight: 600;
     font-size: 18px;
     margin-left: 15px;
   }
 
   .active-title {
-    font-family: sans-serif;
-    font-weight: normal;
+    font-family: 'Poppins';
+    font-weight: 600;
     font-size: 18px;
     margin-left: 15px;
   }
@@ -35,22 +36,21 @@ const CreditDom = styled.div`
     width: 100%;
     background-color: rgb(245, 245, 245);
     border-radius: 25px;
-    padding: 15px 25px 15px 25px;
-    margin-bottom: 40px;
+    padding: 20px 30px 20px 30px;
+    margin-bottom: 30px;
   }
 
   .price {
-    font-family: sans-serif;
-    font-weight: normal;
+    font-family: 'Poppins';
+    font-weight: 600;
     font-size: 24px;
     margin-bottom: 7px;
   }
 
   .price-explain {
-    font-family: sans-serif;
+    font-family: 'Poppins';
     font-weight: normal;
     font-size: 14px;
-    font-weight: normal;
     margin: 0;
   }
 
@@ -68,6 +68,12 @@ const CreditDom = styled.div`
       padding-left: 30px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
+
+      .header {
+        font-family: 'Poppins';
+        font-weight: Bold;
+        font-size: 15px;
+      }
     }
   }
 `;

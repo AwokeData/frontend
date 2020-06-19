@@ -40,6 +40,7 @@ const IntroductionWrapper = styled.section`
 
   h2 {
     text-transform: capitalize;
+    font-family: 'Poppins';
   }
 
   .left {
@@ -47,6 +48,7 @@ const IntroductionWrapper = styled.section`
     color: $primary-blue;
 
     p {
+      font-family: 'Poppins';
       font-size: 20px;
     }
   }

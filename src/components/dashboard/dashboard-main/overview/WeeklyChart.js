@@ -105,7 +105,7 @@ export default class WeeklyChart extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" height={272}>
+      <ResponsiveContainer width="100%" height={300}>
         <AreaChart
           data={data}
           margin={{

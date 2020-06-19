@@ -78,7 +78,7 @@ export default class MonthlyExpenseChart extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" height={248}>
+      <ResponsiveContainer width="100%" height={290}>
         <LineChart
           data={data}
           padding={{

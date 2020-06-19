@@ -84,7 +84,14 @@ const StyledList = styled.ul`
   h6 {
     margin-bottom: 10px;
     line-height: 1.2;
+    font-family: 'Poppins';
+    font-size: 22px;
   }
+
+  p {
+    font-family: 'Poppins';
+  }
+
   @media screen and (max-width: 850px) {
     padding-left: 45px;
   }
