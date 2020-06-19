@@ -76,10 +76,10 @@ export default class DailyChart extends PureComponent {
             domain={['dataMin', 'dataMax']}
             ticks={[0, 10, 20, 30, 40]}
             label={{
-              value: ' Temperature (in °C)',
+              value: 'Active Account Balance ',
               padding: { top: 10 },
               angle: -90,
-              position: 'insideBottomLeft',
+              position: 'center',
             }}
           />
           <Tooltip />

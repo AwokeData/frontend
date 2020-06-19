@@ -26,7 +26,7 @@ const ProductWrapper = styled.div`
 const ProductSectionTitle = styled.section`
   position: relative;
   overflow: hidden;
-  margin-top: -75px;
+  margin-top: -200px;
   background-color: #eff9fb;
   z-index: 1;
   min-height: 80vh;
@@ -76,7 +76,8 @@ const ProductSectionTitle = styled.section`
   h2 {
     font-size: 45px;
     text-align: left;
-    z-index: 2;
+    z-index: 2; 
+    margin-top: 75px;
   }
 
   @media screen and (max-width: 1020px) {
@@ -110,7 +111,7 @@ const ProductSectionTitle = styled.section`
 
 const ProductSectionContent = styled.section`
   text-align: center;
-  margin: auto;
+  margin: 50px 0px 50px 0px;
 
   .flex-box {
     justify-content: space-evenly;

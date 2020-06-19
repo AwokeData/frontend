@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const StepperDiv = styled.section`
-  height: 95vh;
+  height: 105vh;
   h3 {
     text-align: left;
     margin-bottom: 50px;

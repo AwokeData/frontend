@@ -12,7 +12,7 @@ const HowItWorksSection = styled.div`
     height: 292px;
     background-color: #fee6d4;
   }
-  margin-top: -70px;
+  margin-top: -200px;
   background-image: url(${process.env.PUBLIC_URL + '/imgs/how-blob.png'});
   background-repeat: no-repeat;
   background-size: contain;
@@ -37,7 +37,7 @@ const HowItWorksSection = styled.div`
 `;
 
 const HowItWorksSectionTitle = styled.section`
-  padding-top: 50px;
+  padding-top: 135px;
 
   .title {
     height: 400px;
@@ -48,6 +48,7 @@ const HowItWorksSectionTitle = styled.section`
   h1 {
     font-size: 60px !important;
     text-align: left;
+    text-transform: capitalize;
   }
 
   @media screen and (max-width: 700px) {
@@ -72,7 +73,7 @@ const HowItWorksSectionContent = styled.section`
   .flex-box {
     justify-content: space-around;
     align-items: center;
-    margin: 30px 80px 30px 0;
+    margin: 30px 30px 30px 0;
 
     &.flip {
       text-align: right;

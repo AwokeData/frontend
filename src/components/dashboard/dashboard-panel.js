@@ -8,7 +8,7 @@ const DashboardPanelWrapper = styled.div`
   @media screen and (max-width: 1100px) {
     display: none;
   }
-  margin: 10px 0 0 10px;
+  margin: 25px 0 0 10px;
   padding-right: 25px;
   text-align: left;
   color: white;
@@ -64,7 +64,7 @@ const PanelBoxes = styled.div`
   .user-title {
     font-family: 'Poppins';
     font-weight: Bold;
-    font-size: 22px;
+    font-size: 15px;
     margin-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -72,8 +72,8 @@ const PanelBoxes = styled.div`
 
   .menu-title {
     font-family: 'Poppins';
-    font-weight: Bold;
-    font-size: 22px;
+    font-weight: Normal;
+    font-size: 18px;
     margin-top: 10px;
   }
 `;

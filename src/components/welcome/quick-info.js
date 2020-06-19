@@ -9,7 +9,7 @@ const IntroMissionSection = styled.section`
   justify-content: center;
   color: black;
   padding: 0;
-  height: 85vh !important;
+  height: 100vh !important;
 
   text-align: left;
 

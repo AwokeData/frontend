@@ -8,7 +8,7 @@ const IntroMissionSection = styled.section`
   justify-content: center;
   color: black;
   padding: 0;
-  height: 65vh !important;
+  height: 85vh !important;
 
   text-align: left;
 
@@ -53,7 +53,7 @@ const IntroMissionSection = styled.section`
 
   @media screen and (max-width: 850px) {
     padding: 30px;
-    margin: 30px 0;
+    margin: 500px 0;
 
     .flex-box {
       flex-direction: column-reverse;

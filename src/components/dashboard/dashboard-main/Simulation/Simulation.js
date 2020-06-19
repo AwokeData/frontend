@@ -145,7 +145,7 @@ const Stochastic = styled.div`
     }
 
     .chart-header {
-      padding-left: 30px;
+      padding-left: 50px;
       background-color: #eceef4;
       border-radius: 25px 25px 0px 0px !important;
 
@@ -240,7 +240,7 @@ export default function Simulation() {
               <Card>
                 <Card.Content className="chart-header">
                   <Card.Header>
-                    Daily Temperature Variation in Bengaluru - July 2017
+                    Monte Carlo Simulation Results
                   </Card.Header>
                 </Card.Content>
                 <Card.Content>

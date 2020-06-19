@@ -8,7 +8,7 @@ const InformationSection = styled.section`
   h1.ui.header {
     font-size: 46px;
     width: 70%;
-    margin: 0 auto;
+    margin: 100px auto;
   }
 
   h3.ui.header {

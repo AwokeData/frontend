@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const IntroductionWrapper = styled.section`
-  height: calc(75vh);
+  height: calc(85vh);
   width: 100vw;
   position: relative;
   padding: 0;

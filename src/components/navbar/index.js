@@ -26,24 +26,9 @@ class NavBar extends React.Component {
     return (
       <nav className="sticky" id="navbar">
         <Menu secondary id="primary-menu">
-          <h1>Company Logo</h1>
-          <Menu.Item
-            as={Link}
-            to={'/'}
-            active={activeItem === 'home'}
-            onClick={this.handleItemClick}
-            id="home"
-            name="home"
-          >
-            Home
-          </Menu.Item>
-          <Menu.Item
-            as={Link}
-            to={'/about'}
-            name="about"
-            active={activeItem === 'about'}
-            onClick={this.handleItemClick}
-          />
+          <h1><a href={'/'}>Company Logo</a></h1>
+          
+          
           <Menu.Item
             as={Link}
             to={'/how-it-works'}
@@ -56,6 +41,13 @@ class NavBar extends React.Component {
             to={'/products'}
             name="products"
             active={activeItem === 'products'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            as={Link}
+            to={'/about'}
+            name="about"
+            active={activeItem === 'about'}
             onClick={this.handleItemClick}
           />
           <Menu.Menu position="right">
