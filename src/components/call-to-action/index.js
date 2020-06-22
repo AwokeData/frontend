@@ -1,94 +1,78 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import { Container, Grid, Header, Form, Button } from 'semantic-ui-react';
+import styled from 'styled-components';
 
-import { Button } from "semantic-ui-react";
+const ContactSection = styled.section`
+  background-color: #384586;
 
-import { Controller, Scene } from "react-scrollmagic";
-import { Tween } from "react-gsap";
+  .ui.header {
+    color: white;
+    text-align: left;
+  }
 
-const CallToActionSection = styled.section`
-    background-color: #384586;
-    margin: auto;
+  h1.ui.header {
+    font-family: 'Poppins';
+    font-weight: Bold;
+    font-size: 40px;
+  }
 
-    padding: 25vh 0;
+  h2.ui.header {
+    font-family: 'Poppins';
+    font-weight: Bold;
+    font-size: 30px;
+  }
 
-    h3 {
-        margin-bottom: 40px;
-        text-transform: capitalize;
+  .ui.button {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 770px) {
+    .ui.grid > .row > .column {
+      width: 100% !important;
     }
+
+    .ui.grid > .row > .column:first-child {
+      margin-bottom: 20px;
+    }
+
+    .ui.form .fields {
+      margin-bottom: 15px !important;
+    }
+  }
 `;
 
-const CtaBtnWrapper = styled.div`
-    width: 425px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-
-    @media screen and (max-width: 500px) {
-        width: 100%;
-        justify-content: space-around;
-
-        button {
-            width: 130px!important;
-        }
-    }
-`;
-
-export default class CTA extends React.Component {
-    render() {
-
-        return (
-            <CallToActionSection id="call-to-action">
-                <div className="container">
-                    <Controller>
-                        <Scene triggerElement="#call-to-action" duration={200}>
-                            {progress => (
-                                <Tween
-                                    from={{
-                                        opacity: 0,
-                                        yPercent: 50
-                                    }}
-                                    to={{
-                                        yPercent:0,
-                                        opacity: 1
-                                    }}
-                                    ease="Back.easeOut"
-                                    totalProgress={progress}
-                                    paused
-                                >
-                                <h3 className="white">Have more questions?</h3>
-                                </Tween>
-                            )}
-                        </Scene>
-                        <Scene triggerElement="#call-to-action" duration={200}>
-                            {progress => (
-                                <Tween
-                                    from={{
-                                        opacity: 0,
-                                        yPercent: 50
-                                    }}
-                                    to={{
-                                        yPercent:0,
-                                        opacity: 1
-                                    }}
-                                    ease="Back.easeOut"
-                                    totalProgress={progress}
-                                    paused
-                                >
-                                    <CtaBtnWrapper>
-                                        <Button className="primary-button bigger">
-                                            Apply Now
-                                        </Button>
-                                        <Button className="secondary-button bigger">
-                                            Learn More
-                                        </Button>
-                                    </CtaBtnWrapper>
-                                </Tween>
-                            )}
-                        </Scene>   
-                    </Controller>
-                </div>
-            </CallToActionSection>
-        );
-    }
+function CallToAction() {
+  return (
+    <ContactSection>
+      <Container>
+        <Grid columns={2}>
+          <Grid.Row>
+            <Grid.Column>
+              <Header as="h1">Have More Questions?</Header>
+              <Header as="h2">Speak to Our Sales Team</Header>
+            </Grid.Column>
+            <Grid.Column>
+              <Form>
+                <Form.Group unstackable widths={2}>
+                  <Form.Input placeholder="First name" />
+                  <Form.Input placeholder="Last name" />
+                </Form.Group>
+                <Form.Input placeholder="Email" />
+                <Form.Input placeholder="Company Name" />
+                <Form.Input placeholder="Phone Number" />
+                <Button className="primary-button fullscreen-btn" type="submit">
+                  SUBMIT
+                </Button>
+              </Form>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
+    </ContactSection>
+  );
 }
+
+export default CallToAction;

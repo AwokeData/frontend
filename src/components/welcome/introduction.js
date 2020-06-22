@@ -1,32 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import bg from '../../images/slant-bg.png';
-import introimg from '../../images/introimg2.png';
-
 const IntroductionWrapper = styled.section`
-  height: calc(100vh - 80px);
+  height: calc(85vh);
   width: 100vw;
   position: relative;
-
-  .blob {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-image: url(${bg});
-    width: 100vw;
-    height: 90vh;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  padding: 0;
+  background-image: url(${process.env.PUBLIC_URL + '/imgs/slant-bg.png'});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .main-img {
     position: absolute;
-    bottom: 13px;
+    bottom: 0;
     right: 0;
-    width: 60vw;
+    width: 50vw;
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,18 +30,24 @@ const IntroductionWrapper = styled.section`
 
   h2 {
     text-transform: capitalize;
+    font-family: 'Poppins';
   }
 
   .left {
     text-align: left;
     color: $primary-blue;
+
+    p {
+      font-family: 'Poppins';
+      font-size: 18px;
+    }
   }
 
   .right {
     img {
       width: 100%;
     }
-    flex-basis: 40%;
+    flex-basis: 50%;
   }
 
   @media screen and (max-width: 900px) {
@@ -103,10 +97,9 @@ const IntroductionWrapper = styled.section`
 
 const Intro = () => (
   <IntroductionWrapper>
-    <div className="blob"></div>
     <img
       className="main-img"
-      src={introimg}
+      src={process.env.PUBLIC_URL + '/imgs/homeinfo.png'}
       alt="astronaunt floating in space"
     />
     <div className="flex-box two-items container">

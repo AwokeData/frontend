@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import OverView from './overview/OverView';
-import Expense from './Expense';
-import Income from './Income';
-import Credit from './Credit';
-import Simulation from './Simulation';
+import Expense from './expense/Expense';
+import Income from './income/Income';
+import Credit from './credit/Credit';
+import Simulation from './Simulation/Simulation';
 import StressTesting from './StressTesting';
 
 const ROOT = window.location.pathname;
@@ -23,6 +23,8 @@ const DashboardMainWrapper = styled.div`
   background-color: white;
   border-radius: 50px 0 0 0;
   text-align: left;
+  height: 100vh;
+  overflow-y: scroll;
 `;
 
 const DashboardContainer = styled.div`

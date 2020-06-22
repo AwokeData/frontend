@@ -2,9 +2,8 @@ import React from 'react';
 import { Menu, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import { ROUTE_ROOT } from '../../utils/constants';
 
-const ROOT = ROUTE_ROOT + '/dashboard';
+const ROOT = '/dashboard';
 
 const DashboardNavWrapper = styled.nav`
   a.item {
@@ -21,6 +20,18 @@ const DashboardNavWrapper = styled.nav`
 
   #primary-menu {
     max-width: none !important;
+
+    .item {
+      font-family: 'Poppins';
+      font-weight: Normal;
+      font-size: 16px;
+
+      h1 {
+        font-family: 'Poppins';
+        font-weight: Bold;
+        font-size: 24px;
+      }
+    }
   }
 `;
 
@@ -33,10 +44,7 @@ class DashboardNav extends React.Component {
         (props &&
           props.location &&
           props.location.pathname &&
-          this.props.location.pathname.replace(
-            '/altdatana-react/dashboard/',
-            '',
-          )) ||
+          this.props.location.pathname.replace('/dashboard/', '')) ||
         'shop',
     };
   }
@@ -52,7 +60,7 @@ class DashboardNav extends React.Component {
         <Menu secondary id="primary-menu">
           <Menu.Item
             as={Link}
-            to={`${ROUTE_ROOT}/`}
+            to="/"
             name="Home"
             onClick={this.handleItemClick}
           >
@@ -61,7 +69,6 @@ class DashboardNav extends React.Component {
           <Menu.Item
             as={Link}
             to={`${ROOT}/lender`}
-            style={{ marginLeft: 100 }}
             name="LENDER HOMEPAGE"
             className="dashboard-item"
             active={activeItem === 'lender'}
@@ -69,7 +76,7 @@ class DashboardNav extends React.Component {
           />
           <Menu.Item
             as={Link}
-            to={`${ROOT}/user/id`}
+            to={`${ROOT}/user/id/overview`}
             name="USER 1869245781"
             className="dashboard-item"
             active={activeItem === 'user'}
@@ -81,10 +88,12 @@ class DashboardNav extends React.Component {
               as={Link}
               active={activeItem === 'login'}
               onClick={this.handleItemClick}
+              style={{ marginLeft: 0, marginRight: 20 }}
               className="login"
-              to={`${ROUTE_ROOT}/login`}
+              to="/login"
             >
-              <Image src="/images/wireframe/square-image.png" avatar />
+              <Image src={process.env.PUBLIC_URL + '/imgs/avatar.png'} avatar />{' '}
+              LOGOUT
             </Menu.Item>
           </Menu.Menu>
         </Menu>

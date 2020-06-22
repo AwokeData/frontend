@@ -12,8 +12,7 @@ const Welcome = () => (
     <Mission />
     <Stepper />
     <QuickInfo />
-    <CallToAction/>
+    <CallToAction />
   </div>
 );
-
 export default Welcome;
