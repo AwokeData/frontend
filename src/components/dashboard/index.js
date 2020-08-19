@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import { connect } from 'react-redux';
 
+import axios from 'axios';
+
 import DashboardMain from './dashboard-main';
 import DashboardNav from './dashboard-nav';
 import DashboardPanel from './dashboard-panel';
@@ -17,6 +19,17 @@ const DashboardContent = styled.div`
 `;
 
 class Dashboard extends React.Component {
+  state = {
+    data: []
+  }
+  componentDidMount() {
+    const url = `/get_data`;
+    axios.get(url).then(response => response.data)
+    .then((data) => {
+      this.setState({ data: data })
+      console.log(this.state.data.categories)
+     })
+  }
   render() {
     return (
       <DashboardWrapper id="dashboard">

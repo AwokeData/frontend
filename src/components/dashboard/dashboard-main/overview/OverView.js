@@ -165,7 +165,7 @@ export default function OverView() {
           <Grid.Row>
             <Grid.Column>
               <Label>
-                <p className="price">$75,757.00</p>
+                <p className="price">{data.smallest_expenditure}</p>
                 <p className="price-explain">Ext.Annual Income</p>
               </Label>
             </Grid.Column>
